@@ -1,0 +1,52 @@
+body{
+	font-size: 16pt;
+}
+
+header > nav ul , footer{
+	list-style: none;
+	background-color: #4f4f4f;
+	margin: 0;
+	text-align: center;
+	font-size: 18pt;
+}
+
+header > nav ul li >a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+header > nav ul li{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+footer>div{
+	padding: 10px;
+	color: #ffffff;
+}
+
+.photo{
+	text-align: center;
+	color: #0077b5;
+
+}
+
+.photo img{
+	width: 30%;
+	height: 30%;
+	border: 1px solid black;
+	border-radius: 50%;
+}
+
+.contact-form, .social-media{
+	float: left;
+	position: relative;
+	width: 45%;
+	margin-left: 2%;
+}
+
+footer{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
