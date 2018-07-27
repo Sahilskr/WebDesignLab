@@ -50,3 +50,20 @@ footer{
 	width: 100%;
 	bottom: 0;
 }
+
+.gallery figure img{
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+}
+
+.gallery{
+	text-align: center;
+}
+
+.gallery figure{
+	display: inline-block;
+	border: 1px solid black;
+	position: relative;
+	padding: 5px;
+}
