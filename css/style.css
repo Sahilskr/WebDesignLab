@@ -39,16 +39,15 @@ footer>div{
 }
 
 .contact-form, .social-media{
-	float: left;
 	position: relative;
 	width: 45%;
 	margin-left: 2%;
 }
 
 footer{
-	position: fixed;
 	width: 100%;
 	bottom: 0;
+	position: relative;
 }
 
 .gallery figure img{
