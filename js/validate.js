@@ -45,30 +45,21 @@ function submitForm(e) {
 	if(document.getElementById("user-email").value!=""
 		&& document.getElementById("subject").value!=""
 		&& document.getElementById("message").value!=""){
-		var contact=document.getElementByClassName("contact-form");
-		contact[0].innerHTML = "<h3>Thank You for your response. We'll Shortlu in touch";
+		var contact=document.getElementsByClassName("contact-form");
+		contact[0].innerHTML = "<h3>Thank You for your response. We'll Shortly in touch</h3>";
 	}
 
 }
 
 
 var email=document.getElementById("user-email");
-email.addEventListener('blur', checkEmail,false); 
+email.addEventListener('blur', checkEmail,false);
 
 
 var subject=document.getElementById("subject");
-subject.addEventListener('blur', checkSubject,false); 
+subject.addEventListener('blur', checkSubject,false);
 
 
 
 var submit=document.getElementById("submit-btn");
-submit.addEventListener('click',submitForm,false); 
-
-
-
-
-
-
-
-
-
+submit.addEventListener('click',submitForm,false);
