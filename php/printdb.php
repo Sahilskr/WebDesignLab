@@ -10,7 +10,7 @@
                 padding: 2px;
             }
             table tr:nth-child(odd){
-                background-color: yellow;
+                background-color: violet;
             }
         </style>
     </head>
@@ -33,12 +33,12 @@ if($_POST)
             !empty($semail)&&!empty($dept)&&!empty($batch)){
         
 //Inserting data in the database
-        $link=mysqli_connect('localhost','root','root','aiktc');
+        $link=mysqli_connect('localhost','root','root','AIKTC');
         if(!$link){
             echo '<br>Unable to connect to Database.'
             .mysqli_connect_error();
         }
-        $query="Insert into students values ('$rollno','$name','$gender',"
+        $query="Insert into Students values ('$rollno','$name','$gender',"
                 . "'$address','$dob',"
                 . "'$sem','$semail','$dept','$batch')";
         $result=mysqli_query($link,$query);
@@ -66,39 +66,39 @@ if($_POST)
      ?>
             <tr>
                 <td>Roll No</td>
-                <td><?php echo $row[rollno];?></td>
+                <td><?php echo $row['rollno'];?></td>
             </tr>
             <tr>
                 <td>Name</td>
-                <td><?php echo $row[name];?></td>
+                <td><?php echo $row['name'];?></td>
             </tr>
             <tr>
                 <td>Gender</td>
-                <td><?php echo $row[gender];?></td>
+                <td><?php echo $row['gender'];?></td>
             </tr>
             <tr>
                 <td>Address</td>
-                <td><?php echo $row[address];?></td>
+                <td><?php echo $row['address'];?></td>
             </tr>
             <tr>
                 <td>Date of Birth</td>
-                <td><?php echo $row[dob];?></td>
+                <td><?php echo $row['dob'];?></td>
             </tr>
             <tr>
                 <td>Semester</td>
-                <td><?php echo $row[sem];?></td>
+                <td><?php echo $row['sem'];?></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><?php echo $row[email];?></td>
+                <td><?php echo $row['email'];?></td>
             </tr>
             <tr>
                 <td>Department</td>
-                <td><?php echo $row[dept];?></td>
+                <td><?php echo $row['dept'];?></td>
             </tr>
             <tr>
                 <td>Batch</td>
-                <td><?php echo $row[batch];?></td>
+                <td><?php echo $row['batch'];?></td>
             </tr>
         
 <?php        
