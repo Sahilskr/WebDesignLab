@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marksheet[
+	<!ELEMENT marksheet (course+)>
+	<!ELEMENT course (courseid,title,TH,IA,ORPR,TW,total)>
+	<!ELEMENT courseid (#PCDATA)>
+	<!ELEMENT title (#PCDATA)>
+	<!ELEMENT TH (#PCDATA)>
+	<!ELEMENT IA (#PCDATA)>
+	<!ELEMENT ORPR (#PCDATA)>
+	<!ELEMENT TW (#PCDATA)>
+	<!ELEMENT total (#PCDATA)>
+	]>
+<marksheet>
+	<course>
+		<courseid>CSC401</courseid>
+		<title>Maths</title>
+		<TH>32</TH>
+		<IA>08</IA>
+		<ORPR>--</ORPR>
+		<TW>25</TW>
+		<total>150</total>
+	</course>
+
+	<course>
+		<courseid>CSC402</courseid>
+		<title>AOA</title>
+		<TH>32</TH>
+		<IA>08</IA>
+		<ORPR>10</ORPR>
+		<TW>10</TW>
+		<total>150</total>
+	</course>
+
+	<course>
+		<courseid>CSC403</courseid>
+		<title>COA</title>
+		<TH>32</TH>
+		<IA>08</IA>
+		<ORPR>10</ORPR>
+		<TW>10</TW>
+		<total>150</total>
+	</course>
+
+	<course>
+		<courseid>CSC404</courseid>
+		<title>CG</title>
+		<TH>32</TH>
+		<IA>08</IA>
+		<ORPR>10</ORPR>
+		<TW>10</TW>
+		<total>150</total>
+	</course>
+
+
+	<course>
+		<courseid>CSC405</courseid>
+		<title>OS</title>
+		<TH>32</TH>
+		<IA>08</IA>
+		<ORPR>10</ORPR>
+		<TW>10</TW>
+		<total>150</total>
+	</course>
+
+	<course>
+		<courseid>CSC406</courseid>
+		<title>OSTL</title>
+		<TH>--</TH>
+		<IA>--</IA>
+		<ORPR>30</ORPR>
+		<TW>30</TW>
+		<total>100</total>
+	</course>
+
+
+</marksheet>
