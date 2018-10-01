@@ -14,3 +14,22 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/resume', function () {
+    return view('resume');
+});
+
+
+Route::get('/gallery', function () {
+    return view('gallery');
+});
+
+
+Route::get('/contact', function () {
+    return view('contact');
+});

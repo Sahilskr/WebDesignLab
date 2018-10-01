@@ -60,47 +60,73 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */,
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
-/* 1 */
+/* 3 */
 /***/ (function(module, exports) {
 
-$(function () {
-	$('#rollno').on('blur', function () {
-		if (!/(\d{2}((CO)|(DCO)|(EE)|(DEE)|(EX)|(DEX)|(ME)|(DME)|(CE)|(DCE)|(CES)|(DCES))\d{2,3})/i.test(this.value)) {
-			alert("Invalid Roll no");
-			this.value = "";
-			$(this).focus();
-		}
-	});
+function checkEmail(e) {
+	var element = e.target;
+	if (/[^a-zA-Z0-9@._]/.test(element.value)) {
+		alert("Email is invalid! Only characters a-z A-Z 0-9 @ . _ allowed");
+		element.value = "";
+		return false;
+	}
+	if (!/[a-zA-Z]/.test(element.value)) {
+		alert("Email is invalid!  a-z A-Z characters are must");
+		element.value = "";
+		return false;
+	}
+	if (!/[@]/.test(element.value)) {
+		alert("Email is invalid! You are missing @");
+		element.value = "";
+		return false;
+	}
+	if (!/[.]/.test(element.value)) {
+		alert("Email is invalid! .domain name is missing");
+		element.value = "";
+		return false;
+	}
+	return true;
+}
 
-	$('#sname').on('keypress', function (e) {
-		if (/[^a-zA-z ]/.test(e.key)) {
-			alert("Invalid Name. Only Alphabets and Spaces are allowed");
-			this.value = "";
-			$(this).focus();
-			e.stopPropagation();
-			return false;
-		}
-	});
+function checkSubject(e) {
+	var element = e.target;
+	if (/[^a-zA-Z]/.test(element.value)) {
+		alert("Email is invalid!  a-z A-Z characters are must");
+		element.value = "";
+		return false;
+	}
+	return true;
+}
 
-	$('#address').on('blur', function () {
-		if (this.value.length < 50 || this.value.length > 150) {
-			alert("Invalid Address.Length must be between 50 to 150 characters");
-			this.value = "";
-			$(this).focus();
-		}
-	});
-});
+function submitForm(e) {
+	e.preventDefault();
+	if (document.getElementById("user-email").value != "" && document.getElementById("subject").value != "" && document.getElementById("message").value != "") {
+		var contact = document.getElementsByClassName("contact-form");
+		contact[0].innerHTML = "<h3>Thank You for your response. We'll Shortly in touch</h3>";
+	}
+}
+
+var email = document.getElementById("user-email");
+email.addEventListener('blur', checkEmail, false);
+
+var subject = document.getElementById("subject");
+subject.addEventListener('blur', checkSubject, false);
+
+var submit = document.getElementById("submit-btn");
+submit.addEventListener('click', submitForm, false);
 
 /***/ })
 /******/ ]);
